@@ -1,0 +1,26 @@
+
+### CoE4 Balance Mod ### 
+
+icon "balance_mod_sprites/_logo.tga"
+description "Balance modification."
+
+
+#Enchanter - Extra apprentice to alleviate the ritual bottleneck
+selectclass 15 
+addstartcom "Enchanter's apprentice"
+
+
+#Enchanter - Reduce AP cost of basic summoning rituals or have them summon more than 1 unit.
+selectritual "Animate Sword"
+summoning
+addstring "1d2*Dancing Sword"
+
+selectritual "Animate Bow"
+summoning
+addstring "1d2*Living Bow"
+
+selectritual "Animate Armor"
+summoning
+addstring "1d2*Living Armor"
+
+
