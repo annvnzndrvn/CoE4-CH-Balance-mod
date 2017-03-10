@@ -1,26 +1,114 @@
 
-### CoE4 Balance Mod ### 
+### CoE4 CH Balance Mod ### 
 
 icon "balance_mod_sprites/_logo.tga"
 description "Balance modification."
 
+#All Classes - Add scouts commanders (without leadership)
+selectmonster "Scout"
+noleader
+selectclass 1
+addcomrec "Scout" 6 5 1 0
+selectclass 2
+addcomrec "Scout" 6 5 1 0
+selectclass 3
+addcomrec "Scout" 6 5 1 0
+selectclass 4
+addcomrec "Scout" 6 5 1 0
+selectclass 5
+addcomrec "Scout" 6 5 1 0
+selectclass 6
+addcomrec "Scout" 6 5 1 0
+selectclass 7
+addcomrec "Scout" 6 5 1 0
+selectclass 8
+addcomrec "Scout" 6 5 1 0
+selectclass 9
+addcomrec "Scout" 6 5 1 0
+selectclass 10
+addcomrec "Scout" 6 5 1 0
+selectclass 11
+addcomrec "Scout" 6 5 1 0
+selectclass 12
+addcomrec "Scout" 6 5 1 0
+selectclass 13
+addcomrec "Scout" 6 5 1 0
+selectclass 14
+addcomrec "Scout" 6 5 1 0
+selectclass 15
+addcomrec "Scout" 6 5 1 0
+selectclass 16
+addcomrec "Scout" 6 5 1 0
+selectclass 17
+addcomrec "Scout" 6 5 1 0
+selectclass 18
+addcomrec "Scout" 6 5 1 0
+selectclass 19
+addcomrec "Scout" 6 5 1 0
+selectclass 20
+addcomrec "Scout" 6 5 1 0
+selectclass 21
+addcomrec "Scout" 6 5 1 0
+selectclass 22
+addcomrec "Scout" 6 5 1 0
+selectclass 23
+addcomrec "Scout" 6 5 1 0
+selectclass 24
+addcomrec "Scout" 6 5 1 0
 
 #Enchanter - Extra apprentice to alleviate the ritual bottleneck
 selectclass 15 
 addstartcom "Enchanter's apprentice"
 
-
-#Enchanter - Reduce AP cost of basic summoning rituals or have them summon more than 1 unit.
+#Enchanter - Reduce AP cost of basic summoning rituals or have them summon more than 1 unit
 selectritual "Animate Sword"
+ritpow 11
+clearritspec
+nostart
+
+newritual "Animate Sword"
+ritpow 11
+level 1
+terr -9
+cost 1 1
+apcost 2
 summoning
-addstring "1d2*Dancing Sword"
+addstring "1d3*Dancing Sword"
 
 selectritual "Animate Bow"
+ritpow 11
+clearritspec
+nostart
+
+newritual "Animate Bow"
+ritpow 11
+level 1
+terr -9
+cost 1 1
+apcost 2
 summoning
-addstring "1d2*Living Bow"
+addstring "1d3*Living Bow"
 
 selectritual "Animate Armor"
+ritpow 11
+clearritspec
+nostart
+
+newritual "Animate Armor"
+ritpow 11
+level 1
+terr -9
+cost 1 10
+apcost 2
 summoning
-addstring "1d2*Living Armor"
+addstring "1d3*Animated Armor"
 
+#Druid - Add a cavalry commander for their recruitable cav.
+newmonster "Beast Cavalry Captain"
+copystats "Beast Cavalry"
+hp 11
+str 5
+mor 6
 
+selectclass 10
+addcomrec "Beast Cavalry Captain" 6 45 15 0
